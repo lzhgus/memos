@@ -20,11 +20,11 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: false
-          tags: neosmemo/memos:e2e
-          labels: neosmemo/memos:e2e
+          tags: reborn61/memos:e2e
+          labels: reborn61/memos:e2e
 
       - name: Run Docker container
-        run: docker run -d -p 5230:5230 neosmemo/memos:e2e
+        run: docker run -d -p 5230:5230 reborn61/memos:e2e
 
       - uses: pnpm/action-setup@v2.2.4
         with:
