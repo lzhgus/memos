@@ -35,7 +35,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.PAT }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Docker Buildx
         id: buildx
@@ -50,7 +50,7 @@ jobs:
         with:
           images: |
             reborn61/memos
-            ghcr.io/reborn61/memos
+            ghcr.io/lzhgus/memos
           tags: |
             type=raw,value=latest
             type=semver,pattern={{version}},value=${{ env.VERSION }}
