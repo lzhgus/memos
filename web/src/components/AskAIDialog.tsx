@@ -83,6 +83,7 @@ const AskAIDialog: React.FC<Props> = (props: Props) => {
           <Icon.Bot className="mr-1 w-5 h-auto opacity-80" />
           {t("ask-ai.title")}
         </p>
+        <Icon.Trash className="w-5 flex flex-row ml-auto h-auto opacity-80 mr-2" onClick={() => messageStore.clearMessages()} />
         <button className="btn close-btn" onClick={() => hide()}>
           <Icon.X />
         </button>
